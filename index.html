@@ -38,7 +38,14 @@
         <div class="container">
             
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" style='text-decoration: none;' href="index.html"><img src="images/logo.svg" alt="Rhino Logo">Ryan Schniederjan, PA(ASCP), MHS, MSIT, CSM</a>  
+            <a class="navbar-brand" style='text-decoration: none;' href="index.html">
+                <div>
+                <img class='logo-image' src="images/logo.svg" alt="Rhino Logo">
+                </div>
+                <div class='logo-text'>
+                    Ryan Schniederjan, PA(ASCP), MHS, MSIT, CSM
+                </div>
+            </a>  
 
             <!-- Text Logo - Use this if you don't have a graphic logo -->
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Mark</a> -->
@@ -60,7 +67,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item page-scroll" href="#pathology">Pathologists' Assistant</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="#software">Full-Stack Development</a>
+                            <a class="dropdown-item page-scroll" href="#software">Full Stack Development</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item page-scroll" href="#production">Production</a>
                         </div>
@@ -143,7 +150,7 @@
                     <a class='page-scroll' href="#software">
                         <div class="text-box">
                             <i class="fas fa-code"></i>
-                            <h4>Full-Stack Development</h4>
+                            <h4>Full Stack Development</h4>
                             <p>Knowing how something works is the first step</p>
                         </div> <!-- end of text-box -->
                     </a> <!-- end of software a tag -->
@@ -260,7 +267,7 @@
 </div> <!-- end of split -->
 <!-- start of container under split-->
 <div class='container'>
-    <!-- start of area-3 -->
+    <!-- start of Software Edu & Projects -->
     <div class='row area-3'>
         <div class='col-lg-6'>
             <div class="text-container first">
@@ -275,6 +282,8 @@
                 <h6>American Intercontinental University</h6>
                 <p>Masters of Information Technology - Health Informatics</p>
             </div> <!-- end of text-container -->
+        </div><!-- end of col -->
+        <div class='col-lg-6'>
             <div class="text-container second">
                 <h2>Experience</h2>
                 <div class="time">2020 - 2023</div>
@@ -286,12 +295,16 @@
                     Medical practice networking and desktop support
                 </p>      
             </div> <!-- end of text-container -->
-        </div><!-- end of col -->
+        </div> <!-- end of second col-->
+    </div> <!-- end of first row -->
+    <div class='row area-4-heading'>
+        <h2>Featured Projects</h2>
+    </div> <!-- end of Featured Projects heading row-->
+    <div class='row area-3'>
         <div class='col-lg-6'>
             <div class="text-container">
-                <h2 class="h2-heading"> Featured Projects</h2>
                 <div class="image-container">
-                    <iframe height='270px' width='480px' src="https://www.youtube.com/embed/fxLqGzXfRcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    <iframe style='aspect-ratio: 16/9; width: 100%;' src="https://www.youtube.com/embed/fxLqGzXfRcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
                     </iframe>
                 </div> <!-- end of image-container -->
                 <div class="icons-container">
@@ -313,6 +326,8 @@
                     <li><a href="https://www.squadmate.app/"><button type='button' class='btn btn-dark'>Deployed App</button></a></li>
                 </ul>              
             </div> <!-- end of text-container -->
+        </div> <!-- end of col 1-->
+        <div class='col-lg-6'>
             <div class="text-container">
                 <div class="image-container">
                     <a href="terminal-kombat.html">
@@ -328,12 +343,14 @@
                     <li><strong>Team: </strong> 4-person development team</li>
                     <li><strong>Features: </strong> Multiple enemy characters with different combat actions, random point deduction, and random enemy defense actions.  Music and ANCII graphics.</li>
                     <li><a href="https://github.com/rynoschni/terminal-kombat"><i class="fab fa-github icon-push"></i>More Details...</a></li>
-                 </ul>
+                </ul>
             </div> <!-- end of text-container -->
-        </div>
-    </div>
-</div>
+        </div> <!-- end of col 2 -->
+    </div> <!-- end of Featured Projects -->
+</div> <!-- end of Software Edu & Projects -->
 <!-- end of Software -->
+
+
 <!-- Start of Production -->
 
 <!-- end of Production -->
@@ -435,12 +452,13 @@
 <!-- CAPTCHA for forms-->
 <script src="https://www.google.com/recaptcha/api.js?render=6LejY5opAAAAAEOiw3ECyPeTcymh7cnPr-aJYH29"></script>
 <script>
-    grecaptcha.ready(function () {
+    function contactSubmit(e) {
+        e.preventDefault();
         grecaptcha.execute('6LejY5opAAAAAEOiw3ECyPeTcymh7cnPr-aJYH29', {action: 'submit'}).then(function (token) {
             console.info("got token: " + token);
             document.getElementById('g-recaptcha-response').value = token;
         });
-    });
+    };
 </script>
 </body>
 </html>
